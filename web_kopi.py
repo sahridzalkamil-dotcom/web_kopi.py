@@ -32,7 +32,7 @@ st.markdown("""
     
     /* Mengubah warna teks subheader dan deskripsi agar kontras */
     .stMarkdown p, .stSubheader {
-        color: #ffffff !important;
+        color: #2e7d32 !important;
     }
     
     /* MENGUBAH WARNA JUDUL UTAMA MENJADI HIJAU */
