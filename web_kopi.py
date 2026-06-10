@@ -36,7 +36,7 @@ st.markdown("""
     
     /* Mempercantik kotak Info Menu (Tab 1) */
     .stAlert {
-        background-color: #2e7d32 !important;
+        background-color: #F4A460 !important;
         border-left: 5px solid #8B5A2B !important;
         border-radius: 8px !important;
         box-shadow: 0 4px 6px rgba(0,0,0,0.05);
