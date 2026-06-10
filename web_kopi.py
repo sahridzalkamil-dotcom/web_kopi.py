@@ -23,13 +23,13 @@ st.markdown("""
 <style>
     /* Mengubah font utama dan latar belakang aplikasi */
     .stApp {
-        background-color: #8B4513;
+        background-color: #8B4513 !important;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     
     /* Mempercantik Judul Utama */
     h1 {
-        color: #4a2c11 !important;
+        color: #2e7d32 !important;
         font-weight: 800 !important;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     }
