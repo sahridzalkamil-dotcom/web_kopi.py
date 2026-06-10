@@ -1,7 +1,6 @@
 import sqlite3
 import streamlit as st
 
-# === 1. PENGATURAN DATABASE ===
 def koneksi_db():
     koneksi = sqlite3.connect("for_rest_coffee.db")
     return koneksi
@@ -18,15 +17,13 @@ CREATE TABLE IF NOT EXISTS menu (
 conn.commit()
 conn.close()
 
-# === 2. TAMPILAN UTAMA & CUSTOM CSS ===
 st.set_page_config(page_title="FOR REST COFFEE", page_icon="☕", layout="centered")
 
-# Menyuntikkan CSS Kustom untuk mengubah tampilan bawaan Streamlit
 st.markdown("""
 <style>
     /* Mengubah font utama dan latar belakang aplikasi */
     .stApp {
-        background-color: #fcf8f2;
+        background-color: #8B4513;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     
