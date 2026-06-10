@@ -21,29 +21,40 @@ conn.close()
 # === 2. TAMPILAN UTAMA & CUSTOM CSS ===
 st.set_page_config(page_title="FOR REST COFFEE", page_icon="☕", layout="centered")
 
+# Menyuntikkan CSS Kustom
 st.markdown("""
 <style>
+    /* MENGUBAH BACKGROUND UTAMA MENJADI COKELAT */
     .stApp {
         background-color: #8B4513 !important;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+    
+    /* Mengubah warna teks subheader dan deskripsi agar kontras */
     .stMarkdown p, .stSubheader {
         color: #ffffff !important;
     }
+    
+    /* MENGUBAH WARNA JUDUL UTAMA MENJADI HIJAU */
     h1 {
         color: #2e7d32 !important; 
         font-weight: 800 !important;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
     }
+    
+    /* UPGRADE KOTAK MENU */
     .stAlert {
         background-color: #F5F5DC !important;
         border-left: 5px solid #2e7d32 !important;
         border-radius: 12px !important;
         box-shadow: 0 6px 12px rgba(0,0,0,0.25);
     }
+    
     .stAlert p, .stAlert span, .stAlert strong {
         color: #4a2c11 !important;
     }
+    
+    /* Kustomisasi Tombol Hapus */
     div.stButton > button {
         background-color: #e63946 !important;
         color: white !important;
@@ -56,6 +67,8 @@ st.markdown("""
         transform: scale(1.05);
         box-shadow: 0 4px 8px rgba(230,57,70,0.3);
     }
+    
+    /* Kustomisasi Tombol Simpan */
     div.stButton > button[type="primary"] {
         background-color: #4a2c11 !important;
         color: white !important;
@@ -63,6 +76,21 @@ st.markdown("""
     }
     div.stButton > button[type="primary"]:hover {
         background-color: #211003 !important;
+    }
+
+    /* 👇 DI SINI POSISINYA, SAYA SUDAH SELIPKAN LANGSUNG 👇 */
+    .menu-card {
+        background-color: #fcf8f2;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        margin-bottom: 20px;
+        border: 1px solid #e1d7c6;
+    }
+    .menu-card p {
+        color: #4a2c11 !important;
+        margin-top: 10px;
+        font-size: 1rem;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -189,14 +217,27 @@ with tab3:
         st.write("*Belum bisa melakukan transaksi karena belum ada menu di database.*")
 
 # ==========================================
-# TAB 4: VISUALISASI GALERI FOTO MENU
+# TAB 4: VISUALISASI GALERI FOTO MENU (GANTI BAGIAN INI)
 # ==========================================
 with tab4:
     st.header("🖼️ Galeri Visual Menu Kopi")
+    
     kolom1, kolom2 = st.columns(2)
     with kolom1:
-        st.image("https://images.unsplash.com/photo-1541167760496-1628856ab772?w=500", 
-                 caption="☕ Espresso & Kopi Susu Klasik", use_container_width=True)
+        # Menggunakan HTML khusus untuk membungkus foto ke dalam 'menu-card'
+        st.markdown("""
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=500" style="width:100%; border-radius:10px;">
+            <p><b>☕ Espresso & Kopi Susu Klasik</b><br>
+            <span style="font-size:0.85rem; color:#7a5c43;">Perpaduan racikan espresso yang bold dengan gurihnya susu segar murni.</span></p>
+        </div>
+        """, unsafe_allow_html=True)
+        
     with kolom2:
-        st.image("https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500", 
-                 caption="🧊 Iced Latte Premium", use_container_width=True)
+        st.markdown("""
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500" style="width:100%; border-radius:10px;">
+            <p><b>🧊 Iced Latte Premium</b><br>
+            <span style="font-size:0.85rem; color:#7a5c43;">Kesegaran es kopi susu premium rendah asam yang siap mendinginkan hari yang sibuk.</span></p>
+        </div>
+        """, unsafe_allow_html=True)
