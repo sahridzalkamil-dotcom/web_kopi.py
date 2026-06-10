@@ -78,7 +78,6 @@ st.markdown("""
         background-color: #211003 !important;
     }
 
-    /* 👇 DI SINI POSISINYA, SAYA SUDAH SELIPKAN LANGSUNG 👇 */
     .menu-card {
         background-color: #fcf8f2;
         padding: 15px;
